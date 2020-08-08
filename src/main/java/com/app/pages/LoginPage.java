@@ -26,7 +26,7 @@ public class LoginPage
 	
 	public String getTitleofPage()
 	{
-		String pageTitle = elementUtil.waitAndGetPageTitle(Constants.loginPageTitle, 20);
+		String pageTitle = elementUtil.waitAndGetPageTitle(Constants.LOGIN_PAGE_TITLE, 20);
 		return pageTitle;
 	}
 	

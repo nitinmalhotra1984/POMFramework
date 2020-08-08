@@ -1,5 +1,7 @@
 package com.app.base;
 
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -7,15 +9,17 @@ import org.testng.annotations.BeforeTest;
 public class BaseTest 
 {
 	public WebDriver driver;
+	public Properties prop;
 	
 	
 	@BeforeTest
 	public void setUp()
 	{
 		BasePage basePage = new BasePage();
-		driver = basePage.init_driver("Chrome");
+		prop = basePage.init_properties();
+		driver = basePage.init_driver(prop);
 		driver.manage().window().maximize();
-		driver.get("https://app.hubspot.com");
+		driver.get(prop.getProperty("url"));
 		
 	}
 	

@@ -24,7 +24,7 @@ public class LoginPageTest extends BaseTest
 	public void verifyLoginPageTitleTest()
 	{
 		String loginPageTitle = loginPage.getTitleofPage();
-		Assert.assertEquals(loginPageTitle, Constants.loginPageTitle);
+		Assert.assertEquals(loginPageTitle, Constants.LOGIN_PAGE_TITLE);
 	}
 	
 	
