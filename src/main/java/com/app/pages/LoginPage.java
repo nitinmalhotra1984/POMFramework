@@ -30,6 +30,11 @@ public class LoginPage
 		return pageTitle;
 	}
 	
+	public boolean verifySignUpLinkExistence()
+	{
+		boolean flag = elementUtil.getDisplayStatusOfElement(this.signupLink);
+		return flag;
+	}
 	
 	
 }

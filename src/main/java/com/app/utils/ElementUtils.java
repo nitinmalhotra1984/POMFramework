@@ -41,6 +41,15 @@ public class ElementUtils
 		String pageTitle = driver.getTitle();
 		return pageTitle;
 		
+	}
+	
+	public boolean getDisplayStatusOfElement(By locator)
+	{
+		waitForElementToBeVisible(locator,20);
+		WebElement element = getElement(locator);
+		boolean flag = element.isDisplayed();
+		return flag;
+		
 		
 	}
 }

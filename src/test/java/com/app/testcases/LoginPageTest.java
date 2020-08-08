@@ -37,11 +37,19 @@ public class LoginPageTest
 	}
 	
 	
-	@Test
+	@Test(priority=1)
 	public void verifyLoginPageTitleTest()
 	{
 		String loginPageTitle = loginPage.getTitleofPage();
 		Assert.assertEquals(loginPageTitle, Constants.loginPageTitle);
+	}
+	
+	
+	@Test(priority=2)
+	public void verifySignUpLinkTest()
+	{
+		boolean flag = loginPage.verifySignUpLinkExistence();
+		Assert.assertTrue(flag);
 	}
 	
 	
