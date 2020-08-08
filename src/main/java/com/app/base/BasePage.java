@@ -3,6 +3,7 @@ package com.app.base;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -13,6 +14,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BasePage 
 {
+	
+	public Logger log = Logger.getLogger(BasePage.class);
+	
 	public WebDriver init_driver(Properties prop)
 	{
 		WebDriver driver=null;

@@ -1,0 +1,5 @@
+2020-08-08 23:43:56,963  INFO [main] BaseTest:23 - browser is launched
+2020-08-08 23:44:00,573  INFO [main] BaseTest:26 - Application is launched
+2020-08-08 23:44:08,391  INFO [main] BasePage:31 - title of the page is returned
+2020-08-08 23:44:08,394  INFO [main] BaseTest:28 - title is getting validated
+2020-08-08 23:44:08,557  INFO [main] BasePage:39 - Sign up Link existence is validate

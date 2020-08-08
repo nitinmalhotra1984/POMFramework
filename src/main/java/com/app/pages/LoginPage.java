@@ -3,10 +3,11 @@ package com.app.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.app.base.BasePage;
 import com.app.utils.Constants;
 import com.app.utils.ElementUtils;
 
-public class LoginPage 
+public class LoginPage extends BasePage
 {
 	private WebDriver driver;
 	ElementUtils elementUtil;
@@ -27,13 +28,17 @@ public class LoginPage
 	public String getTitleofPage()
 	{
 		String pageTitle = elementUtil.waitAndGetPageTitle(Constants.LOGIN_PAGE_TITLE, 20);
+		log.info("title of the page is returned");
 		return pageTitle;
+		
 	}
 	
 	public boolean verifySignUpLinkExistence()
 	{
 		boolean flag = elementUtil.getDisplayStatusOfElement(this.signupLink);
+		log.info("Sign up Link existence is validate");
 		return flag;
+		
 	}
 	
 	

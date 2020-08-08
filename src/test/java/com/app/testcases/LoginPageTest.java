@@ -25,6 +25,7 @@ public class LoginPageTest extends BaseTest
 	{
 		String loginPageTitle = loginPage.getTitleofPage();
 		Assert.assertEquals(loginPageTitle, Constants.LOGIN_PAGE_TITLE);
+		log.info("title is getting validated");
 	}
 	
 	

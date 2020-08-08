@@ -1,0 +1,9 @@
+For log4j - there are 4 types of logs - 
+1) Info; 2) Warning; 3) Error and 4) fatal
+
+how to generate the logs - use Apache log4j API
+how it works - it reads log 4j configuration from log4j.properties file
+where to create - we need to create a source folder - src/main/resources folder
+and add log4j.properties file there. 
+
+ 
