@@ -1,33 +1,16 @@
 package com.app.testcases;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.app.base.BaseTest;
 import com.app.pages.LoginPage;
 import com.app.utils.Constants;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-public class LoginPageTest 
+public class LoginPageTest extends BaseTest
 {
 	LoginPage loginPage;
-	WebDriver driver;
-	
-	
-	@BeforeTest
-	public void setUp()
-	{
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("https://app.hubspot.com");
-		
-	}
 	
 	
 	@BeforeClass
@@ -53,10 +36,6 @@ public class LoginPageTest
 	}
 	
 	
-	@AfterTest
-	public void tearDown()
-	{
-		driver.quit();
-	}
+	
 	
 }
